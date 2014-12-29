@@ -412,6 +412,7 @@
 				D3816F7B1A52030300CFE59E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3816F7C1A52030300CFE59E /* Build configuration list for PBXNativeTarget "2038Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				D3816F7E1A52030300CFE59E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
