@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) NSTimer *timer;
+@property (weak, nonatomic) IBOutlet UILabel *counterLabel;
+
+- (void)updateCounter:(NSNumber *)timer;
+- (void)countdownTimer;
 
 @end
 
