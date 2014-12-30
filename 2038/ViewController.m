@@ -21,8 +21,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
+    // setup shape, outline, and color of the "More Info" button
+    self.moreInfoButton.layer.cornerRadius = 4;
+    self.moreInfoButton.layer.borderWidth = 1;
+    self.moreInfoButton.layer.borderColor = [UIColor blueColor].CGColor;
+    
+    // grab the current ammount of seconds since January 1st, 1970.
     currentUnixTime = [[NSDate date] timeIntervalSince1970];
     maxUnixTime = 2147526847;
     secondsLeft = maxUnixTime - currentUnixTime;
@@ -51,6 +56,11 @@
 
 - (void)countdownTimer {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
+}
+
+- (IBAction)showMoreInfo:(id)sender {
+    NSURL *y2038Url = [NSURL URLWithString:@"http:en.m.wikipedia.org/wiki/Year_2038_problem"];
+    [[UIApplication sharedApplication] openURL:y2038Url];
 }
 
 @end

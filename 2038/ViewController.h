@@ -12,9 +12,11 @@
 
 @property (strong, nonatomic) NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UILabel *counterLabel;
+@property (strong, nonatomic) IBOutlet UIButton *moreInfoButton;
 
 - (void)updateCounter:(NSNumber *)timer;
 - (void)countdownTimer;
+- (IBAction)showMoreInfo:(id)sender;
 
 @end
 
