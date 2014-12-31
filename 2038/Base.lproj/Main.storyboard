@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,15 +17,21 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seconds Left:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-Qd-LWT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds Left:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-Qd-LWT">
                                 <rect key="frame" x="16" y="137" width="343" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="zGA-T6-Ord"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30U-5Q-yiw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30U-5Q-yiw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                 <color key="backgroundColor" red="0.60000002384185791" green="0.87058830261230469" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="qvb-Rq-REk"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Y2038 Countdown">
                                         <attributes>
@@ -36,8 +43,11 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtX-c3-cTs">
-                                <rect key="frame" x="139" y="578" width="96" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtX-c3-cTs">
+                                <rect key="frame" x="143" y="582" width="88" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="OVs-kx-Tir"/>
+                                </constraints>
                                 <state key="normal" title="More Info">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -47,6 +57,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.76078438758850098" green="0.91372555494308472" blue="0.94117653369903564" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="WSG-Qd-LWT" firstAttribute="top" secondItem="30U-5Q-yiw" secondAttribute="bottom" constant="50" id="9hY-F5-hvS"/>
+                            <constraint firstItem="30U-5Q-yiw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Rs7-xz-CxY"/>
+                            <constraint firstItem="PtX-c3-cTs" firstAttribute="centerX" secondItem="WSG-Qd-LWT" secondAttribute="centerX" id="SdM-pf-dnK"/>
+                            <constraint firstItem="WSG-Qd-LWT" firstAttribute="centerX" secondItem="30U-5Q-yiw" secondAttribute="centerX" id="UB2-4o-Jcq"/>
+                            <constraint firstItem="WSG-Qd-LWT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="VL0-TM-1um"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PtX-c3-cTs" secondAttribute="bottom" constant="55" id="odj-9h-DFa"/>
+                            <constraint firstItem="30U-5Q-yiw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tP5-le-Wal"/>
+                            <constraint firstItem="PtX-c3-cTs" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="xn7-Ph-MPc"/>
+                        </constraints>
                     </view>
                     <keyCommands/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
