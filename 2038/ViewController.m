@@ -12,6 +12,7 @@
 {
     int hours, minutes, seconds, days, years;
     int secondsLeft;
+    int tmp;
     int currentUnixTime;
     int maxUnixTime;
 }
@@ -42,13 +43,17 @@
 - (void)updateCounter:(NSTimer *)timer {
     if (secondsLeft > 0) {
         secondsLeft--;
-        years = (secondsLeft / ((secondsLeft % 3600) / 60));
-        days = (secondsLeft / 86400);
-        hours = (secondsLeft / 3600);
-        minutes = (secondsLeft % 3600) / 60;
-        seconds = (secondsLeft % 3600) % 60;
-//        self.counterLabel.text = [NSString stringWithFormat:@"Time Left: %02d:%02d:%02d", hours, minutes, seconds];
-        self.counterLabel.text = [NSString stringWithFormat:@"Seconds Left: %d", secondsLeft];
+        tmp = secondsLeft;
+        seconds = tmp % 60;
+        tmp /= 60;
+        minutes = tmp % 60;
+        tmp /= 60;
+        hours = tmp % 24;
+        tmp /= 24;
+        days = tmp % 365;
+        tmp /= 365;
+        years = tmp;
+        self.counterLabel.text = [NSString stringWithFormat:@"Time Left: %02d:%02d:%02d:%02d:%02d", years, days, hours, minutes, seconds];
     } else {
         self.counterLabel.text = @"Time's up!";
     }
