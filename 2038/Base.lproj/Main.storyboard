@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds Left:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-Qd-LWT">
-                                <rect key="frame" x="16" y="137" width="343" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-Qd-LWT">
+                                <rect key="frame" x="16" y="153" width="129" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="zGA-T6-Ord"/>
+                                    <constraint firstAttribute="height" constant="110" id="zGA-T6-Ord"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -55,13 +55,19 @@
                                     <action selector="showMoreInfo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BIz-GZ-lBN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Remaining:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6Q-Ky-SRm">
+                                <rect key="frame" x="16" y="124" width="129" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.76078438758850098" green="0.91372555494308472" blue="0.94117653369903564" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="WSG-Qd-LWT" firstAttribute="top" secondItem="30U-5Q-yiw" secondAttribute="bottom" constant="50" id="9hY-F5-hvS"/>
+                            <constraint firstItem="WSG-Qd-LWT" firstAttribute="top" secondItem="30U-5Q-yiw" secondAttribute="bottom" constant="66" id="9hY-F5-hvS"/>
                             <constraint firstItem="30U-5Q-yiw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Rs7-xz-CxY"/>
-                            <constraint firstItem="PtX-c3-cTs" firstAttribute="centerX" secondItem="WSG-Qd-LWT" secondAttribute="centerX" id="SdM-pf-dnK"/>
-                            <constraint firstItem="WSG-Qd-LWT" firstAttribute="centerX" secondItem="30U-5Q-yiw" secondAttribute="centerX" id="UB2-4o-Jcq"/>
+                            <constraint firstItem="PtX-c3-cTs" firstAttribute="centerX" secondItem="WSG-Qd-LWT" secondAttribute="centerX" constant="106.5" id="SdM-pf-dnK"/>
+                            <constraint firstItem="WSG-Qd-LWT" firstAttribute="centerX" secondItem="30U-5Q-yiw" secondAttribute="centerX" constant="-107" id="UB2-4o-Jcq"/>
                             <constraint firstItem="WSG-Qd-LWT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="VL0-TM-1um"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PtX-c3-cTs" secondAttribute="bottom" constant="55" id="odj-9h-DFa"/>
                             <constraint firstItem="30U-5Q-yiw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tP5-le-Wal"/>

@@ -53,7 +53,9 @@
         days = tmp % 365;
         tmp /= 365;
         years = tmp;
-        self.counterLabel.text = [NSString stringWithFormat:@"Time Left: %02d:%02d:%02d:%02d:%02d", years, days, hours, minutes, seconds];
+        self.counterLabel.text = [NSString stringWithFormat:
+                                  @"Years: %02d\nDays: %02d\nHours: %02d\nMinutes: %02d\nSeconds: %02d",
+                                  years, days, hours, minutes, seconds];
     } else {
         self.counterLabel.text = @"Time's up!";
     }
